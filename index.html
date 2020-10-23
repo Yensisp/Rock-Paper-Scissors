@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+// ask player for input
+    let playerSelection = prompt("Select Between: Rock, Paper, or Scissors");
+
+// generates rock, paper, or scissors for computer
+    function computerPlay () {
+        var things = ['Rock', 'Paper', 'Scissors'];
+        var thing = things[Math.floor(Math.random()*things.length)];
+        alert('The computer chose: ' + thing);
+    }
+
+    let computerSelection = computerPlay();
+
+// determine whether rock, paper, or scissors will win
+    function playRound (playerSelection, computerSelection) {
+        //check for Winner
+        if (playerSelection === "Rock" && computerSelection === "Scissors" ||
+        playerSelection === "Paper" && computerSelection === "Rock" ||
+        playerSelection === "Scissors" && computerSelection === "Paper") {
+        console.log("You win!")
+        return;
+        //check for tie
+        } else if (playerSelection ===computerSelection) {
+            console.log("Its a tie!")
+            return;
+        } else {
+            console.log("You lose!")
+            return;
+        }
+    }
+
+</script>
+</head>
+</html>
